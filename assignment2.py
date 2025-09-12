@@ -1,5 +1,5 @@
 """
-### Name:
+### Name: Kyan Dupuis
 ### Assignment 2
 #### Calculation of an investment with a recurring deposit
 The simple interest formula only works if the principal or initial investment is not touched.  If an amount is added to the principal every year, then the interest must be calculated and added along with the future deposit to determine the starting balance at the beginning of the next year.
@@ -24,3 +24,21 @@ final balance: 1320.68
 
 """
 
+P = input("What is your annual investment?: ")
+P = float(P)
+PInitial = float(P)
+rPercent = input("What is the annual interest rate?: ")
+rPercent = float(rPercent)
+r = rPercent/100
+t = input("How many years will you be investing for?: ")
+t = int(t)
+
+for tTime in range(0,t):
+    if P > 100:
+        P = P + PInitial
+    I = P * r 
+    P = P + I
+
+P = round(P,2)
+
+print(f"You ended up with ${P} after investing ${PInitial} every year for {t} years at an annual interest rate of {rPercent}%")
