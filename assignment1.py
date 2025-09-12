@@ -15,23 +15,23 @@ Your program should ask the user for
 * Appropriate formatting of the output is a requirement for this assignment
 """
 
-P = input("How much do you want to invest? ")
+P = input("How much do you want to invest?: ")
 P = float(P)
-rPercent = input("What is the annual interest rate? ")
+rPercent = input("What is the annual interest rate?: ")
 rPercent = float(rPercent)
 r = rPercent/100
 
-tLength = input("Will your time be in years, months, or days? ")
+tLength = input("Will your time be in years, months, or days?: ")
 
 if tLength == "Years" or tLength == "years":
-    tAmount = input("How many years? ")
+    tAmount = input("How many years?: ")
     t = float(tAmount)
 elif tLength == "Months" or tLength == "months":
-    tAmount = input("How many months? ")
+    tAmount = input("How many months?: ")
     t = float(tAmount)
     t = t/12
 elif tLength == "Days" or tLength == "days":
-    tAmount = input("How many days? ")
+    tAmount = input("How many days?: ")
     t = float(tAmount)
     t = t/365
 else:

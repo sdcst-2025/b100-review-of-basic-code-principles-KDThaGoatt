@@ -24,18 +24,21 @@ final balance: 1320.68
 
 """
 
-P = input("What is your annual investment? ")
+P = input("What is your annual investment?: ")
 P = float(P)
 PInitial = float(P)
-rPercent = input("What is the annual interest rate? ")
+rPercent = input("What is the annual interest rate?: ")
 rPercent = float(rPercent)
 r = rPercent/100
-t = input("How many years will you be investing for? ")
+t = input("How many years will you be investing for?: ")
 t = int(t)
 
 for tTime in range(0,t):
-    P = P + PInitial
+    if P > 100:
+        P = P + PInitial
     I = P * r 
     P = P + I
+
+P = round(P,2)
 
 print(f"You ended up with ${P} after investing ${PInitial} every year for {t} years at an annual interest rate of {rPercent}%")

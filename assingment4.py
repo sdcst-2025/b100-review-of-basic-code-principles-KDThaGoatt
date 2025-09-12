@@ -1,5 +1,5 @@
 """
-### Name:
+### Name: Kyan Dupuis
 ### Assignment 4
 #### Calculation of a debt repayment with recurring payments
 This is the reverse of assignments 2 and 3
@@ -23,3 +23,29 @@ How many months will it take him to pay off the car.  How much interest has he p
 He will have paid 21711.60 in interest
 """
 
+D = input("Enter the amount of initial debt: ")
+D = float(D)
+Dinitial = float(D)
+r = input("Enter the monthly interest rate: ")
+r = float(r)
+r = r/100
+P = input("Enter the monthly payment made: ")
+P = float(P)
+
+months = 0
+Ptotal = 0
+
+while D > 0:
+    interest = D * r
+    if D > P:
+        D = D - P + interest
+        Ptotal = Ptotal + P
+        months = months + 1
+    else:
+        Ptotal = Ptotal + D
+        D = 0
+        months = months + 1
+    
+    
+
+print(f"Over {months} months, you have paid ${round(Ptotal-Dinitial, 2)} in interest")

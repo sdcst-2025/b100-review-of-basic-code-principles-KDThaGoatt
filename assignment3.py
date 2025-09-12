@@ -1,5 +1,5 @@
 """
-### Name:
+### Name: Kyan Dupuis
 ### Assignment 3
 #### Calculation of an investment with a recurring depositS
 This will be the same as assignment 2 except you must use a while loop to iterate through your years.
@@ -23,3 +23,25 @@ rate: 5%
 10 years
 final balance: 1320.68
 """
+
+P = input("What is your annual investment?: ")
+P = float(P)
+PInitial = float(P)
+rPercent = input("What is the annual interest rate?: ")
+rPercent = float(rPercent)
+r = rPercent/100
+t = input("How many years will you be investing for?: ")
+t = int(t)
+
+loops = 0
+
+while t > loops:
+    if P > 100:
+        P = P + PInitial
+    I = P * r 
+    P = P + I
+    loops = loops + 1
+
+P = round(P,2)
+
+print(f"You ended up with ${P} after investing ${PInitial} every year for {t} years at an annual interest rate of {rPercent}%")
